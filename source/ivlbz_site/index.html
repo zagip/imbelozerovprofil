@@ -413,6 +413,14 @@
             <img src="static/photo2.jpg" alt="Ivan Big Photo" class="big-photo">
         </div>
         
+        <h2 class="section-title">💕 MY LOVE 💕</h2>
+        <div class="love-section">
+            <div class="hearts-container">💖💗💓💞💕</div>
+            <img src="static/babka.jpg" alt="Zagipka" class="love-img">
+            <p class="love-text">ZAGIPKA 💘💘💘</p>
+            <div class="hearts-container">💕💞💓💗💖</div>
+        </div>
+        
         <h2 class="section-title">♥ ME VERY LIKE MIUI ♥</h2>
         <div class="miui-section">
             <img src="static/miui.jpg" alt="MIUI Forever" class="miui-img">
@@ -474,6 +482,59 @@
 </html>
 
 <style>
+        .love-section {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #ff69b4, #ff1493, #ff69b4);
+            border: 5px solid #fff;
+            border-radius: 20px;
+            margin: 20px 0;
+            box-shadow: 0 0 30px #ff69b4, 0 0 60px #ff1493;
+            animation: lovePulse 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes lovePulse {
+            0%, 100% { box-shadow: 0 0 30px #ff69b4, 0 0 60px #ff1493; }
+            50% { box-shadow: 0 0 50px #ff1493, 0 0 80px #ff69b4; }
+        }
+        
+        .love-img {
+            max-width: 80%;
+            max-height: 350px;
+            border: 5px solid #fff;
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
+            animation: loveFloat 2s ease-in-out infinite;
+        }
+        
+        @keyframes loveFloat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .love-text {
+            color: #fff;
+            font-size: 2.5em;
+            margin: 15px 0;
+            text-shadow: 2px 2px 4px #000, 0 0 20px #ff1493;
+            animation: loveGlow 1s ease-in-out infinite alternate;
+        }
+        
+        @keyframes loveGlow {
+            from { text-shadow: 2px 2px 4px #000, 0 0 20px #ff1493; }
+            to { text-shadow: 2px 2px 4px #000, 0 0 40px #ff69b4; }
+        }
+        
+        .hearts-container {
+            font-size: 2em;
+            animation: heartsFloat 1s ease-in-out infinite alternate;
+        }
+        
+        @keyframes heartsFloat {
+            from { transform: scale(1); }
+            to { transform: scale(1.2); }
+        }
+        
         .miui-section {
             text-align: center;
             padding: 20px;
