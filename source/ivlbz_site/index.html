@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>★☆ IvAn'S AwEsOmE pAgE ☆★</title>
+    
+    <!-- Open Graph / Link Preview -->
+    <meta property="og:title" content="★☆ IvAn'S AwEsOmE pAgE ☆★">
+    <meta property="og:description" content="Welcome 2 my awesome page!!! I am Ivan, 15 years old, I love programming!!!">
+    <meta property="og:image" content="static/aiphoto.jpg">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="★☆ IvAn'S AwEsOmE pAgE ☆★">
+    <meta name="twitter:description" content="Welcome 2 my awesome page!!! I am Ivan, 15 years old, I love programming!!!">
+    <meta name="twitter:image" content="static/aiphoto.jpg">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Comic Neue', 'Comic Sans MS', cursive;
+            background: linear-gradient(45deg, #ff00ff, #00ffff, #ff00ff, #ffff00);
+            background-size: 400% 400%;
+            animation: gradientBG 3s ease infinite;
+            min-height: 100vh;
+            overflow-x: hidden;
+            cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><text y="24" font-size="24">✨</text></svg>'), auto;
+        }
+        
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .sparkle-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+            overflow: hidden;
+        }
+        
+        .sparkle {
+            position: absolute;
+            font-size: 20px;
+            animation: sparkleFloat 3s ease-in-out infinite;
+        }
+        
+        @keyframes sparkleFloat {
+            0%, 100% { opacity: 0; transform: translateY(0) rotate(0deg); }
+            50% { opacity: 1; transform: translateY(-20px) rotate(180deg); }
+        }
+        
+        .main-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #8b00ff);
+            border: 5px dashed #fff;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            animation: rainbow 2s linear infinite;
+            box-shadow: 0 0 30px #ff00ff, 0 0 60px #00ffff;
+        }
+        
+        @keyframes rainbow {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+        
+        .header h1 {
+            font-size: 3em;
+            color: #fff;
+            text-shadow: 3px 3px 0 #ff0000, -3px -3px 0 #00ff00, 3px -3px 0 #0000ff, -3px 3px 0 #ffff00;
+            animation: bounce 0.5s ease infinite alternate;
+        }
+        
+        @keyframes bounce {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+        
+        .marquee-container {
+            background: #000;
+            padding: 10px;
+            margin: 20px 0;
+            border: 3px solid #ff00ff;
+        }
+        
+        .marquee {
+            color: #0f0;
+            font-size: 1.5em;
+            white-space: nowrap;
+            animation: marquee 10s linear infinite;
+        }
+        
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        .profile-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
+        .avatar-box {
+            background: linear-gradient(135deg, #ff69b4, #00bfff, #ff69b4);
+            padding: 15px;
+            border-radius: 50%;
+            border: 5px solid gold;
+            animation: spin 4s linear infinite;
+            box-shadow: 0 0 20px gold;
+            position: relative;
+            width: 180px;
+            height: 180px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .avatar-box img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            animation: spin 4s linear infinite reverse;
+            transition: opacity 0.5s;
+        }
+        
+        .avatar-box .avatar-img-1 {
+            animation: avatarSwap1 4s ease-in-out infinite;
+        }
+        
+        .avatar-box .avatar-img-2 {
+            animation: avatarSwap2 4s ease-in-out infinite, spin 4s linear infinite reverse;
+        }
+        
+        @keyframes avatarSwap1 {
+            0%, 45% { opacity: 1; }
+            50%, 95% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        
+        @keyframes avatarSwap2 {
+            0%, 45% { opacity: 0; }
+            50%, 95% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        
+        .info-box {
+            background: rgba(0, 0, 0, 0.7);
+            color: #0f0;
+            padding: 20px;
+            border: 3px solid #0f0;
+            border-radius: 10px;
+            max-width: 400px;
+            box-shadow: 0 0 20px #0f0;
+        }
+        
+        .info-box h2 {
+            color: #ff0;
+            text-shadow: 2px 2px #f00;
+            animation: blinnfinite;
+        }
+        
+        @keyframes blink {
+            50% { opacity: 0.5; }
+        }
+        
+        .info-box ul {
+            list-style: none;
+            margin-top: 10px;
+        }
+        
+        .info-box li {
+            padding: 5px 0;
+            border-bottom: 1px dashed #0f0;
+        }
+        
+        .info-box li::before {
+            content: "★ ";
+            color: #ff0;
+        }
+        
+        .big-photo-section {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: linear-gradient(45deg, #000, #333);
+            border: 5px double #ff0;
+            border-radius: 20px;
+        }
+        
+        .big-photo-section h2 {
+            color: #ff0;
+            font-size: 2em;
+            margin-bottom: 15px;
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #ff0, 0 0 20px #ff0; }
+            to { text-shadow: 0 0 20px #f0f, 0 0 40px #f0f; }
+        }
+        
+        .big-photo {
+            max-width: 100%;
+            max-height: 400px;
+            border: 5px solid;
+            border-image: linear-gradient(45deg, red, orange, yellow, green, blue, purple) 1;
+            animation: borderPulse 2s infinite;
+        }
+        
+        @keyframes borderPulse {
+            0%, 100% { box-shadow: 0 0 20px #ff0; }
+            50% { box-shadow: 0 0 40px #f0f; }
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            color: #fff;
+            background: linear-gradient(to right, #f00, #ff0, #0f0, #0ff, #00f, #f0f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 30px 0 20px;
+            animation: rainbow 3s linear infinite;
+        }
+        
+        .floating-hand {
+            position: fixed;
+            font-size: 24em;
+            z-index: 999;
+            text-shadow: 3px 3px 6px #000;
+            pointer-events: none;
+            text-align: center;
+            line-height: 0.9;
+        }
+        
+        .hand-num {
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 0 0 20px #ff0, 0 0 40px #f0f;
+        }
+        
+        .hand-img {
+            width: 300px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .hand-img-mirror {
+            transform: scaleX(-1);
+        }
+        
+        .hand-left {
+            left: 10px;
+            top: 50%;
+            animation: handBob 2s ease-in-out infinite;
+        }
+        
+        .hand-right {
+            right: 10px;
+            top: 50%;
+            animation: handBob 2s ease-in-out infinite;
+            animation-delay: -1s;
+        }
+        
+        @keyframes handBob {
+            0%, 100% { transform: translateY(-50%); }
+            50% { transform: translateY(-150%); }
+        }
+</style>
+</head>
+<body>
+    <div class="sparkle-container" id="sparkles"></div>
+    
+    <!-- Floating hands -->
+    <div class="floating-hand hand-left"><span class="hand-num">6</span><br><img src="static/hand.jpg" class="hand-img"></div>
+    <div class="floating-hand hand-right"><span class="hand-num">7</span><br><img src="static/hand.jpg" class="hand-img hand-img-mirror"></div>
+    
+    <div class="main-container">
+        <div class="header">
+            <h1>★☆ IvAn'S wOrLd ☆★</h1>
+            <p style="color: #fff; font-size: 1.2em;">~ WeLcOmE 2 My AwEsOmE pAgE ~</p>
+        </div>
+        
+        <div class="marquee-container">
+            <div class="marquee">
+                ★★★ WELCUME TOO MY PAGE!!! ★★★ I NAME IVAN ★★★ 15 YER OLD ★★★ I LOVE PROGRAM ★★★ I LOVE WORKOUT ★★★
+            </div>
+        </div>
+        
+        <div class="profile-section">
+            <div class="avatar-box">
+                <img src="static/photo1.jpg" alt="Ivan's Avatar" class="avatar-img-1">
+                <img src="static/photo3.jpg" alt="Ivan's Avatar 2" class="avatar-img-2">
+            </div>
+            <div class="info-box">
+                <h2>~*~ AbOuT mE ~*~</h2>
+                <ul>
+                    <li>Name: Ivan</li>
+                    <li>Age: 15</li>
+                    <li>Hobby: PROGRAMMING!!!</li>
+                    <li>Favorite OS: MIUI♥♥♥♥♥</li>
+                    <li>Status: mentally ill</li>
+                    <li>FAVORIT MEM: 67 HAHAHHAHAHAHAHH LOL XD </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="big-photo-section">
+            <h2>✧･ﾟ: *✧ ThIs Is I ✧*:･ﾟ✧</h2>
+            <img src="static/photo2.jpg" alt="Ivan Big Photo" class="big-photo">
+        </div>
+        
+        <h2 class="section-title">♥ I LOVE MIUI ♥</h2>
+        <div class="miui-section">
+            <img src="static/miui.jpg" alt="MIUI Forever" class="miui-img">
+            <p class="miui-text">MIUI IS THE BEST!!! 📱✨</p>
+        </div>
+        
+        <h2 class="section-title">💪 I LOVE WORKOYT 💪</h2>
+        <div class="video-section">
+            <video controls autoplay muted loop class="workout-video">
+                <source src="static/workout.MP4" type="video/mp4">
+                Your browser doesn't support video :(
+            </video>
+            <img src="static/workout2.jpg" alt="Workout Photo" class="workout-img">
+            <p class="video-text">I LOVE WORKOUT!!! 💪🔥</p>
+        </div>
+        
+        <h2 class="section-title">😂 FUNNY PHOTOS LOL 😂</h2>
+        <div class="funny-gallery">
+            <div class="funny-item">
+                <img src="static/funny_photo1.webp" alt="Funny 1">
+            </div>
+            <div class="funny-item">
+                <img src="static/funny_photo2.webp" alt="Funny 2">
+            </div>
+        </div>
+        
+        <h2 class="section-title">👑 ME LOVE PLAY CLASH ROYALE 👑</h2>
+        <div class="clash-section">
+            <img src="static/funny_photo3.webp" alt="Clash Royale" class="clash-img">
+            <p class="clash-text">CLASH ROYALE IS ALIVE!!!!! ⚔️👑</p>
+        </div>
+        
+        <h2 class="section-title">🤖 MY AI VERZON 🤖</h2>
+        <div class="ai-section">
+            <div class="ai-gallery">
+                <div class="ai-item">
+                    <img src="static/aiphoto.jpg" alt="AI Ivan 1">
+                </div>
+                <div class="ai-item">
+                    <img src="static/aiphoto2.jpg" alt="AI Ivan 2">
+                </div>
+            </div>
+            <p class="ai-text">THIS IS ME BUTT AI MAKE IT!!! 🤖✨</p>
+        </div>
+        
+        <div class="visitor-counter" style="color: white"></div>
+            КСТАТИ Я ПОД ГРИБАМИ!!!
+        </div>
+        
+        <div class="footer">
+            <p>★ maked by ivblz ★ i loving my macbook 2014 ★</p>
+            <p>better view wich Internet Explorer 6.0</p>
+        </div>
+    </div>
+</body>
+</html>
+
+<style>
+        .miui-section {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            border: 5px solid #fff;
+            border-radius: 20px;
+            margin: 20px 0;
+            animation: pulse 1s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+        
+        .miui-img {
+            max-width: 80%;
+            max-height: 300px;
+            border: 5px solid #fff;
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+        }
+        
+        .miui-text {
+            color: #fff;
+            font-size: 1.8em;
+            margin-top: 15px;
+            text-shadow: 2px 2px 4px #000;
+            animation: bounce 0.5s ease infinite alternate;
+        }
+        
+        .video-section {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            border: 5px solid #e94560;
+            border-radius: 20px;
+            margin: 20px 0;
+        }
+        
+        .workout-video {
+            max-width: 100%;
+            max-height: 400px;
+            border: 5px solid #e94560;
+            border-radius: 10px;
+            box-shadow: 0 0 30px #e94560;
+        }
+        
+        .workout-img {
+            max-width: 80%;
+            max-height: 300px;
+            border: 5px solid #e94560;
+            border-radius: 10px;
+            box-shadow: 0 0 30px #e94560;
+            margin-top: 15px;
+        }
+        
+        .video-text {
+            color: #e94560;
+            font-size: 1.8em;
+            margin-top: 15px;
+            text-shadow: 0 0 10px #e94560;
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+        
+        .funny-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 20px;
+            border: 5px dashed #fff;
+        }
+        
+        .funny-item {
+            background: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            transform: rotate(var(--rotation));
+            transition: transform 0.3s;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .funny-item:nth-child(1) { --rotation: -5deg; }
+        .funny-item:nth-child(2) { --rotation: 3deg; }
+        
+        .funny-item:hover {
+            transform: rotate(0deg) scale(1.1);
+            z-index: 10;
+        }
+        
+        .funny-item img {
+            max-width: 250px;
+            max-height: 250px;
+            border-radius: 5px;
+        }
+        
+        .clash-section {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #1e3a5f, #3d5a80);
+            border: 5px solid #ffd700;
+            border-radius: 20px;
+            margin: 20px 0;
+            box-shadow: 0 0 30px #ffd700, inset 0 0 5rgba(255, 215, 0, 0.2);
+            animation: clashPulse 2s infinite;
+        }
+        
+        @keyframes clashPulse {
+            0%, 100% { box-shadow: 0 0 30px #ffd700, inset 0 0 50px rgba(255, 215, 0, 0.2); }
+            50% { box-shadow: 0 0 50px #ff6b00, inset 0 0 80px rgba(255, 107, 0, 0.3); }
+        }
+        
+        .clash-img {
+            max-width: 80%;
+            max-height: 350px;
+            border: 5px solid #ffd700;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+            animation: clashBounce 1s ease infinite alternate;
+        }
+        
+        @keyframes clashBounce {
+            from { transform: scale(1) rotate(-2deg); }
+            to { transform: scale(1.05) rotate(2deg); }
+        }
+        
+        .clash-text {
+            color: #ffd700;
+            font-size: 2em;
+            margin-top: 15px;
+            text-shadow: 2px 2px 4px #000, 0 0 20px #ff6b00;
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+        
+        .ai-section {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #0f0f23, #1a1a3e, #2d1b4e);
+            border: 5px solid #00ffff;
+            border-radius: 20px;
+            margin: 20px 0;
+            box-shadow: 0 0 30px #00ffff, 0 0 60px #ff00ff;
+            animation: aiGlow 3s ease infinite;
+        }
+        
+        @keyframes aiGlow {
+            0%, 100% { box-shadow: 0 0 30px #00ffff, 0 0 60px #ff00ff; }
+            50% { box-shadow: 0 0 50px #ff00ff, 0 0 80px #00ffff; }
+        }
+        
+        .ai-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .ai-item {
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            padding: 5px;
+            border-radius: 15px;
+            animation: aiFloat 2s ease-in-out infinite;
+        }
+        
+        .ai-item:nth-child(2) {
+            animation-delay: 1s;
+        }
+        
+        @keyframes aiFloat {
+            0%, 100% { transform: translateY(0) rotate(-2deg); }
+            50% { transform: translateY(-10px) rotate(2deg); }
+        }
+        
+        .ai-item img {
+            max-width: 300px;
+            max-height: 300px;
+            border-radius: 10px;
+            display: block;
+        }
+        
+        .ai-text {
+            color: #00ffff;
+            font-size: 1.8em;
+            margin-top: 20px;
+            text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff;
+            animation: aiTextGlow 1.5s ease-in-out infinite alternate;
+        }
+        
+        @keyframes aiTextGlow {
+            from { text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff; color: #00ffff; }
+            to { text-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff; color: #ff00ff; }
+        }
+        
+        .visitor-counter {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: #000;
+            border: 3px solid #0f0;
+            color: #0f0;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .visitor-counter span {
+            color: #ff0;
+            font-size: 1.5em;
+            animation: blink 1s infinite;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(to right, #000, #333, #000);
+            border-top: 5px solid;
+            border-image: linear-gradient(to right, red, orange, yellow, green, blue, purple) 1;
+            color: #fff;
+            margin-top: 30px;
+        }
+        
+        .footer p {
+            margin: 10px 0;
+        }
+        
+        .blink-text {
+            animation: blink 0.5s infinite;
+            color: #ff0;
+            font-size: 1.3em;
+        }
+        
+        /* Under construction GIF style */
+        .under-construction {
+            text-align: center;
+            padding: 10px;
+            background: #ff0;
+            color: #000;
+            font-weight: bold;
+            animation: blink 0.3s infinite;
+        }
+    </style>
+    
+    <script>
+        // Create sparkles
+        function createSparkle() {
+            const sparkles = document.getElementById('sparkles');
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            sparkle.innerHTML = ['✨', '⭐', '💫', '🌟', '✦', '★'][Math.floor(Math.random() * 6)];
+            sparkle.style.left = Math.random() * 100 + '%';
+            sparkle.style.top = Math.random() * 100 + '%';
+            sparkle.style.animationDelay = Math.random() * 2 + 's';
+            sparkles.appendChild(sparkle);
+            
+            setTimeout(() => sparkle.remove(), 3000);
+        }
+        
+        setInterval(createSparkle, 200);
+        
+        // Fake visitor counter
+        let count = 1337;
+        setInterval(() => {
+            count += Math.floor(Math.random() * 3);
+            document.getElementById('counter').textContent = count;
+        }, 5000);
+        
+        // Cursor trail effect
+        document.addEventListener('mousemove', (e) => {
+            const trail = document.createElement('div');
+            trail.style.cssText = `
+                position: fixed;
+                left: ${e.clientX}px;
+                top: ${e.clientY}px;
+                width: 10px;
+                height: 10px;
+                background: ${['#ff0', '#f0f', '#0ff', '#0f0'][Math.floor(Math.random() * 4)]};
+                border-radius: 50%;
+                pointer-events: none;
+                z-index: 9999;
+                animation: fadeOut 0.5s forwards;
+            `;
+            document.body.appendChild(trail);
+            setTimeout(() => trail.remove(), 500);
+        });
+        
+        // Add fadeOut animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeOut {
+                to { opacity: 0; transform: scale(0); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
