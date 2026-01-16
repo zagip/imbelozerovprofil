@@ -36,6 +36,10 @@
             cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><text y="24" font-size="24">✨</text></svg>'), auto;
         }
         
+        html {
+            overflow-x: hidden;
+        }
+        
         @keyframes gradientBG {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
@@ -103,6 +107,7 @@
             padding: 10px;
             margin: 20px 0;
             border: 3px solid #ff00ff;
+            overflow: hidden;
         }
         
         .marquee {
@@ -297,6 +302,72 @@
         @keyframes handBob {
             0%, 100% { transform: translateY(-30%); }
             50% { transform: translateY(-70%); }
+        }
+        
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            .floating-hand {
+                font-size: 8em;
+            }
+            
+            .hand-img {
+                width: 100px;
+            }
+            
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .marquee {
+                font-size: 1em;
+            }
+            
+            .profile-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .avatar-box {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .avatar-box img {
+                width: 100px;
+                height: 100px;
+                top: 10px;
+                left: 10px;
+            }
+            
+            .info-box {
+                max-width: 100%;
+            }
+            
+            .section-title {
+                font-size: 1.4em;
+            }
+            
+            .big-photo {
+                max-height: 250px;
+            }
+            
+            .funny-item img {
+                max-width: 150px;
+                max-height: 150px;
+            }
+            
+            .ai-item img {
+                max-width: 200px;
+                max-height: 200px;
+            }
+            
+            .miui-text, .video-text, .ai-text {
+                font-size: 1.2em;
+            }
+            
+            .clash-text {
+                font-size: 1.4em;
+            }
         }
 </style>
 </head>
